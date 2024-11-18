@@ -17,12 +17,11 @@ function randomChoice(){
   
 }
 const play=(input)=>{
+    
     let aichoice=randomChoice();
-    console.log(document.getElementById(input).textContent);
-    console.log(document.getElementById(aichoice).textContent);
     document.getElementById("us").textContent=document.getElementById(input).textContent;
     document.getElementById("AI").textContent=document.getElementById(aichoice).textContent;
-
+    
     if(input=="rock" && aichoice == "scissors" || input == "scissors" && aichoice == "paper" || input == "paper" && aichoice == "rock"){
         compteurWin++;
     }else if(input=="rock" && aichoice == "paper" || input == "scissors" && aichoice == "rock" || input == "paper" && aichoice == "scissors"){
@@ -38,6 +37,6 @@ const play=(input)=>{
 
 init();
 
-document.getElementById("rock").addEventListener("click",()=>play("rock")); 
+document.getElementById("rock").addEventListener("click",()=>{play("rock")}); 
 document.getElementById("paper").addEventListener("click",()=>play("paper")); 
 document.getElementById("scissors").addEventListener("click",()=>play("scissors")); 
