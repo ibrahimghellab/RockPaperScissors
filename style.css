@@ -57,7 +57,7 @@ button:hover {
     font-size:20vh;
     display: flex;
     justify-content: space-around;
-    
+    transition: all 0.5 ease;
 }
 
 .game{
@@ -68,4 +68,9 @@ button:hover {
 p{
     margin-right: 20px;
     margin-left: 20px;
+}
+
+
+.event{
+    transform: rotate(20deg);
 }
